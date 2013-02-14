@@ -1,5 +1,7 @@
 package com.frontierfrenzy.model.test;
 
+import org.junit.Assert;
+
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Pending;
 import org.jbehave.core.annotations.Then;
@@ -18,15 +20,15 @@ public class PlayerSteps {
 		player = new Player(email);
 	}
 
-	@When("he creates a new account")
+	@When("he creates an account")
 	public void createNewAccount() {
 		account = new Account(player);
 	}
 
 	@Then("a new account is created")
-	@Pending
 	public void checkAccount() {
 		// Don't do anything for now
+		Assert.fail();
 	}
 
 }
